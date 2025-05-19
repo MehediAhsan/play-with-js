@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Binary Data Viewer</title>
+    <style>
+      body {
+        font-family: monospace;
+        padding: 40px;
+      }
+      input,
+      .dropzone {
+        margin-bottom: 20px;
+        display: block;
+      }
+      .dropzone {
+        border: 2px dashed #aaa;
+        padding: 20px;
+        text-align: center;
+        color: #666;
+        cursor: pointer;
+      }
+      pre {
+        background: #f8f8f8;
+        padding: 15px;
+        border-radius: 8px;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>🔍 Binary Data Viewer (ArrayBuffer + Uint8Array)</h2>
+    <input type="file" id="fileInput" />
+    <div class="dropzone" id="dropzone">Or drag & drop a file here</div>
+    <pre id="output">Select or drop a file to view binary contents...</pre>
+    <a id="downloadBtn" style="display: none"
+      ><button>Download as .bin</button></a
+    >
+
+    <script src="./binary-data/buffer.js"></script>
+  </body>
+</html>
