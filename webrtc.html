@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebRTC with Chat & File Sharing</title>
+  </head>
+  <body>
+    <h2>Local Video</h2>
+    <video id="localVideo" autoplay playsinline muted width="300"></video>
+
+    <h2>Remote Video</h2>
+    <video id="remoteVideo" autoplay playsinline width="300"></video>
+
+    <div>
+      <button onclick="startCamera()">Start Camera</button>
+      <button onclick="createOffer()">Create Offer</button>
+      <button onclick="createAnswer()">Create Answer</button>
+      <button onclick="addRemoteDesc()">Set Remote Description</button>
+    </div>
+
+    <h3>Chat</h3>
+    <textarea id="chatLog" readonly rows="10" cols="50"></textarea><br />
+    <input type="text" id="chatInput" placeholder="Type a message..." />
+    <button onclick="sendChat()">Send</button>
+
+    <h3>File Sharing</h3>
+    <input type="file" id="fileInput" />
+    <button onclick="sendFile()">Send File</button>
+
+    <textarea
+      id="signal"
+      placeholder="Paste offer/answer here"
+      rows="10"
+      cols="50"
+    ></textarea>
+    <textarea id="out" readonly rows="10" cols="50"></textarea>
+
+    <script src="socket/webrtc.js"></script>
+  </body>
+</html>
